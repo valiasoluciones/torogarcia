@@ -1,0 +1,22 @@
+{
+  "name": "toro-garcia-firma-legal",
+  "version": "1.0.0",
+  "description": "Sitio web premium para la firma legal Toro & García",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "abogados",
+    "bolivia",
+    "toro-garcia",
+    "firma-legal"
+  ],
+  "author": "Toro & García",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

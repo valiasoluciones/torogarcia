@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toro & García | Firma Legal - Bolivia</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content="Toro & García es una firma legal boliviana premium en La Paz, especializada en derecho civil, comercial, laboral, constitucional y consultoría empresarial.">
+    <meta name="keywords" content="estudio juridico bolivia, abogados la paz, toro garcia firma legal, derecho civil bolivia, derecho comercial la paz, asesoria legal bolivia">
+    <meta name="author" content="Toro & García Firma Legal">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.torogarcialegal.com/">
+    <meta property="og:title" content="Toro & García | Firma Legal - Bolivia">
+    <meta property="og:description" content="Defendemos sus intereses con excelencia jurídica. Asesoría estratégica para personas, empresas e instituciones en Bolivia.">
+    <meta property="og:image" content="images/hero-bg.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Toro & García | Firma Legal - Bolivia">
+    <meta property="twitter:description" content="Asesoría legal estratégica con la máxima solidez jurídica. Edificio Flor de Loto, Calacoto, La Paz.">
+    <meta property="twitter:image" content="images/hero-bg.png">
+
+    <!-- Google Fonts: Cinzel (Titulares tradicionales), Playfair Display (Elegancia), Outfit (Cuerpo moderno y legible) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para Iconografía Premium -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet CSS para Mapa Personalizado sin API Keys -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="dark-theme">
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="nav-logo" id="nav-logo">
+                <img src="images/logo-claro.png" alt="Toro & García Logo" class="logo-img logo-light-only">
+                <img src="images/logo-oscuro.png" alt="Toro & García Logo" class="logo-img logo-dark-only">
+            </a>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li class="nav-item"><a href="#nosotros" class="nav-link">Quiénes Somos</a></li>
+                <li class="nav-item"><a href="#socios" class="nav-link">Socios</a></li>
+                <li class="nav-item"><a href="#practicas" class="nav-link">Áreas de Práctica</a></li>
+                <li class="nav-item"><a href="#proceso" class="nav-link">Proceso</a></li>
+                <li class="nav-item"><a href="#testimonios" class="nav-link">Testimonios</a></li>
+                <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li class="nav-item theme-switch-item">
+                    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Cambiar tema de color">
+                        <i class="fa-solid fa-sun icon-sun"></i>
+                        <i class="fa-solid fa-moon icon-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="inicio">
+        <div class="hero-parallax-bg" style="background-image: linear-gradient(rgba(11, 46, 89, 0.82), rgba(11, 46, 89, 0.9)), url('images/hero-bg.png');"></div>
+        <div class="hero-container container">
+            <div class="hero-grid">
+                <div class="hero-content-left">
+                    <span class="hero-tagline animate-fade-in"><i class="fa-solid fa-scale-balanced text-gold"></i> Prestigio & Solidez Jurídica</span>
+                    <h1 class="hero-title animate-slide-up">Defendemos sus intereses con excelencia jurídica</h1>
+                    <p class="hero-subtitle animate-fade-in">Asesoría legal estratégica para personas, empresas e instituciones en toda Bolivia.</p>
+                    
+                </div>
+
+                <div class="hero-content-right animate-fade-in">
+                    <form id="hero-express-form" class="hero-form-card">
+                        <h3 class="hero-form-title">Consulta Express</h3>
+                        <p class="hero-form-subtitle">Analice su caso de forma inmediata y confidencial.</p>
+                        
+                        <div class="form-group-sm">
+                            <label for="hero-form-name">Nombre Completo <span class="required">*</span></label>
+                            <div class="input-wrapper-sm">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" id="hero-form-name" placeholder="Ej. Juan Pérez" required autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group-sm">
+                            <label for="hero-form-phone">Teléfono / WhatsApp <span class="required">*</span></label>
+                            <div class="input-wrapper-sm">
+                                <i class="fa-solid fa-phone"></i>
+                                <input type="tel" id="hero-form-phone" placeholder="Ej. 77720008" required autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group-sm">
+                            <label for="hero-form-practice">Área de Interés <span class="required">*</span></label>
+                            <div class="input-wrapper-sm">
+                                <i class="fa-solid fa-tags"></i>
+                                <select id="hero-form-practice" required>
+                                    <option value="" disabled selected>Seleccione un área...</option>
+                                    <option value="Derecho Civil">Derecho Civil</option>
+                                    <option value="Derecho Comercial">Derecho Comercial</option>
+                                    <option value="Derecho Laboral">Derecho Laboral</option>
+                                    <option value="Derecho Administrativo">Derecho Administrativo</option>
+                                    <option value="Derecho Constitucional">Derecho Constitucional</option>
+                                    <option value="Consultoría Empresarial">Consultoría Empresarial</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-gold-solid btn-sm btn-block" id="btn-hero-submit" style="margin-top: 15px;">
+                            Enviar Solicitud <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="hero-indicators animate-fade-in">
+                <div class="indicator-item">
+                    <div class="indicator-icon"><i class="fa-solid fa-user-tie"></i></div>
+                    <div class="indicator-info">
+                        <h3>Atención Personalizada</h3>
+                        <p>Estrategias legales a su medida</p>
+                    </div>
+                </div>
+                <div class="indicator-item">
+                    <div class="indicator-icon"><i class="fa-solid fa-gavel"></i></div>
+                    <div class="indicator-info">
+                        <h3>Experiencia Profesional</h3>
+                        <p>Sólida trayectoria jurídica</p>
+                    </div>
+                </div>
+                <div class="indicator-item">
+                    <div class="indicator-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="indicator-info">
+                        <h3>Soluciones Efectivas</h3>
+                        <p>Resultados reales y concretos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1130.5,107.5,1051.64,110.2,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Quiénes Somos -->
+    <section class="about section" id="nosotros">
+        <div class="container">
+            <div class="grid grid-2">
+                <div class="about-content scroll-reveal" data-origin="left">
+                    <div class="section-badge">Sobre la Firma</div>
+                    <h2 class="section-title">Una firma legal comprometida con la excelencia</h2>
+                    <p class="section-description">
+                        Toro & García es una firma legal boliviana especializada en brindar asesoramiento jurídico integral a personas, empresas y organizaciones. Nuestro compromiso es ofrecer soluciones efectivas, éticas y estratégicas para proteger los intereses de nuestros clientes.
+                    </p>
+                    <div class="about-metrics">
+                        <div class="metric">
+                            <span class="metric-num" data-val="15">0</span><span class="metric-plus">+</span>
+                            <span class="metric-label">Años de Trayectoria</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-num" data-val="98">0</span><span class="metric-plus">%</span>
+                            <span class="metric-label">Casos Exitosos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual scroll-reveal" data-origin="right">
+                    <div class="image-wrapper-decorative">
+                        <img src="images/justicia-comercial.png" alt="Reunión corporativa de asesoría legal" class="about-img">
+                        <div class="floating-experience-badge">
+                            <i class="fa-solid fa-certificate"></i>
+                            <div>
+                                <span class="badge-title">Calidad Certificada</span>
+                                <span class="badge-subtitle">Prestigio Académico y Profesional</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Socios -->
+    <section class="partners section" id="socios">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-badge">Nuestros Líderes</div>
+                <h2 class="section-title">Socios Fundadores</h2>
+                <p class="section-subtitle">Profesionales de amplia trayectoria académica y práctica comprometidos con su defensa legal.</p>
+            </div>
+            
+            <div class="grid grid-2">
+                <!-- Socio 1 -->
+                <div class="partner-card scroll-reveal" data-origin="left" id="partner-toro">
+                    <div class="partner-img-container">
+                        <img src="images/socios-toro.jpg" alt="Dr. Alejandro Toro Canedo, PhD" class="partner-img">
+                    </div>
+                    <div class="partner-info">
+                        <span class="partner-role">Socio Fundador / Director Académico</span>
+                        <h3 class="partner-name">Dr. Alejandro Toro Canedo, PhD.</h3>
+                        <p class="partner-desc">
+                            Abogado con amplia experiencia en asesoría jurídica, litigación y consultoría legal. Especializado en la defensa de intereses corporativos y resolución estratégica de conflictos.
+                        </p>
+                        <button class="btn btn-outline btn-sm" onclick="openPartnerModal('toro')">Ver Perfil Completo <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Socio 2 -->
+                <div class="partner-card scroll-reveal" data-origin="right" id="partner-garcia">
+                    <div class="partner-img-container">
+                        <img src="images/socios-garcia.jpg" alt="Dr. César García" class="partner-img">
+                    </div>
+                    <div class="partner-info">
+                        <span class="partner-role">Socio Fundador / Especialista Litigante</span>
+                        <h3 class="partner-name">Dr. César García</h3>
+                        <p class="partner-desc">
+                            Abogado especializado en asesoría legal, representación judicial y consultoría para empresas y particulares, con enfoque en soluciones prácticas y efectivas.
+                        </p>
+                        <button class="btn btn-outline btn-sm" onclick="openPartnerModal('garcia')">Ver Perfil Completo <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Áreas de Práctica -->
+    <section class="practices section bg-alt" id="practicas">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-badge">Servicios Jurídicos</div>
+                <h2 class="section-title">Áreas de Especialidad</h2>
+                <p class="section-subtitle">Brindamos soluciones integrales en diversas ramas del derecho boliviano.</p>
+            </div>
+
+            <div class="practices-grid">
+                <!-- Card 1: Derecho Civil -->
+                <div class="practice-card scroll-reveal">
+                    <div class="practice-icon"><i class="fa-solid fa-house-chimney"></i></div>
+                    <h3 class="practice-title">Derecho Civil</h3>
+                    <p class="practice-desc">Contratos, obligaciones, daños y perjuicios, y representación en todo tipo de procesos civiles.</p>
+                    <a href="#contacto" class="practice-link">Consultar área <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+                <!-- Card 2: Derecho Comercial -->
+                <div class="practice-card scroll-reveal">
+                    <div class="practice-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <h3 class="practice-title">Derecho Comercial</h3>
+                    <p class="practice-desc">Constitución de empresas, fusiones, contratos mercantiles y asesoría corporativa continua.</p>
+                    <a href="#contacto" class="practice-link">Consultar área <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+                <!-- Card 3: Derecho Laboral -->
+                <div class="practice-card scroll-reveal">
+                    <div class="practice-icon"><i class="fa-solid fa-people-group"></i></div>
+                    <h3 class="practice-title">Derecho Laboral</h3>
+                    <p class="practice-desc">Defensa estratégica tanto para empleadores como para trabajadores. Asesoría regulatoria laboral.</p>
+                    <a href="#contacto" class="practice-link">Consultar área <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+                <!-- Card 4: Derecho Administrativo -->
+                <div class="practice-card scroll-reveal">
+                    <div class="practice-icon"><i class="fa-solid fa-landmark"></i></div>
+                    <h3 class="practice-title">Derecho Administrativo</h3>
+                    <p class="practice-desc">Procesos administrativos, recursos jerárquicos y defensa sólida ante entidades públicas.</p>
+                    <a href="#contacto" class="practice-link">Consultar área <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+                <!-- Card 5: Derecho Constitucional -->
+                <div class="practice-card scroll-reveal">
+                    <div class="practice-icon"><i class="fa-solid fa-gavel"></i></div>
+                    <h3 class="practice-title">Derecho Constitucional</h3>
+                    <p class="practice-desc">Acciones de amparo constitucional, acciones de libertad y protección de derechos fundamentales.</p>
+                    <a href="#contacto" class="practice-link">Consultar área <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+                <!-- Card 6: Consultoría Empresarial -->
+                <div class="practice-card scroll-reveal">
+                    <div class="practice-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="practice-title">Consultoría Empresarial</h3>
+                    <p class="practice-desc">Asesoría preventiva, auditoría legal y planeamiento estratégico de riesgos corporativos.</p>
+                    <a href="#contacto" class="practice-link">Consultar área <i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Por qué elegirnos? -->
+    <section class="why-us section" id="por-que-elegirnos">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-badge">Diferenciadores</div>
+                <h2 class="section-title">¿Por qué elegir a Toro & García?</h2>
+                <p class="section-subtitle">Nuestros pilares fundamentales garantizan la mejor representación legal.</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card scroll-reveal">
+                    <div class="why-number">01</div>
+                    <h3 class="why-title">Atención Personalizada</h3>
+                    <p class="why-desc">Cada cliente recibe una estrategia diseñada a medida, adaptada a sus necesidades específicas.</p>
+                </div>
+
+                <div class="why-card scroll-reveal">
+                    <div class="why-number">02</div>
+                    <h3 class="why-title">Experiencia Profesional</h3>
+                    <p class="why-desc">Contamos con un conocimiento jurídico sólido, actualizado y de alto nivel académico.</p>
+                </div>
+
+                <div class="why-card scroll-reveal">
+                    <div class="why-number">03</div>
+                    <h3 class="why-title">Transparencia</h3>
+                    <p class="why-desc">Mantenemos una comunicación clara, honesta y constante durante todo el proceso legal.</p>
+                </div>
+
+                <div class="why-card scroll-reveal">
+                    <div class="why-number">04</div>
+                    <h3 class="why-title">Compromiso con Resultados</h3>
+                    <p class="why-desc">Defendemos los intereses de nuestros clientes con máxima dedicación y enfoque de éxito.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso de Trabajo -->
+    <section class="process section bg-alt" id="proceso">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-badge">Metodología</div>
+                <h2 class="section-title">Nuestro Proceso de Trabajo</h2>
+                <p class="section-subtitle">Cómo estructuramos la defensa y asesoría de su caso para garantizar el mejor resultado.</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="step scroll-reveal">
+                    <div class="step-num-container">
+                        <span class="step-num">1</span>
+                    </div>
+                    <h3 class="step-title">Consulta Inicial</h3>
+                    <p class="step-desc">Escuchamos activamente y analizamos detalladamente su situación particular.</p>
+                </div>
+
+                <div class="step scroll-reveal">
+                    <div class="step-num-container">
+                        <span class="step-num">2</span>
+                    </div>
+                    <h3 class="step-title">Evaluación Jurídica</h3>
+                    <p class="step-desc">Determinamos la viabilidad y las mejores alternativas legales aplicables.</p>
+                </div>
+
+                <div class="step scroll-reveal">
+                    <div class="step-num-container">
+                        <span class="step-num">3</span>
+                    </div>
+                    <h3 class="step-title">Estrategia</h3>
+                    <p class="step-desc">Diseñamos una solución legal personalizada, sólida y orientada a resultados.</p>
+                </div>
+
+                <div class="step scroll-reveal">
+                    <div class="step-num-container">
+                        <span class="step-num">4</span>
+                    </div>
+                    <h3 class="step-title">Ejecución</h3>
+                    <p class="step-desc">Representamos y acompañamos de manera diligente al cliente hasta la conclusión.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+                <!-- Llamado a la Acción (CTA) -->
+    <section class="cta-section section text-center" style="background-image: linear-gradient(rgba(11, 46, 89, 0.93), rgba(11, 46, 89, 0.93)), url('images/hero-bg.png');">
+        <div class="container">
+            <div class="cta-content scroll-reveal">
+                <i class="fa-solid fa-building-shield cta-icon-large text-gold"></i>
+                <h2 class="cta-title">¿Necesita asesoramiento legal?</h2>
+                <p class="cta-text">Nuestro equipo de expertos está preparado para defender sus intereses y guiarle con la máxima solidez.</p>
+                <div class="cta-buttons">
+                    <a href="#contacto" class="btn btn-gold-solid">Agendar Consulta <i class="fa-solid fa-calendar-days"></i></a>
+                    <a href="https://wa.me/59177720008?text=Hola,%20quisiera%20agendar%20una%20consulta%20legal." target="_blank" class="btn btn-outline-white"><i class="fa-brands fa-whatsapp"></i> WhatsApp Directo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Testimonios -->
+    <section class="testimonials section" id="testimonios">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-badge">Opiniones</div>
+                <h2 class="section-title">Testimonios de Clientes</h2>
+                <p class="section-subtitle">La confianza y satisfacción de quienes han trabajado con nosotros respaldan nuestro trabajo.</p>
+            </div>
+
+
+            <!-- Carrusel de Testimonios -->
+            <div class="testimonials-carousel scroll-reveal">
+                <div class="carousel-track-container">
+                    <ul class="carousel-track" id="carousel-track">
+                        <li class="carousel-slide current-slide">
+                            <div class="testimonial-content">
+                                <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <blockquote class="testimonial-text">
+                                    "Excelente atención y gran profesionalismo. El Dr. Toro guió a nuestra corporación en un complejo proceso de reestructuración con total éxito."
+                                </blockquote>
+                                <div class="testimonial-author">
+                                    <div class="author-initials">IB</div>
+                                    <div class="author-meta">
+                                        <cite class="author-name">Ing. Ingvar Blanco</cite>
+                                        <span class="author-title">Gerente General, Conecta SRL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="testimonial-content">
+                                <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <blockquote class="testimonial-text">
+                                    "Resolución eficiente y acompañamiento permanente en todo momento. El Dr. García nos asistió judicialmente de forma implacable y muy profesional."
+                                </blockquote>
+                                <div class="testimonial-author">
+                                    <div class="author-initials">MR</div>
+                                    <div class="author-meta">
+                                        <cite class="author-name">Lic. María René Valda</cite>
+                                        <span class="author-title">Emprendedora Particular</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="carousel-slide">
+                            <div class="testimonial-content">
+                                <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <blockquote class="testimonial-text">
+                                    "Total confianza y resultados satisfactorios. Es muy difícil encontrar una firma que sea transparente desde la consulta inicial hasta la ejecución final. Muy recomendados."
+                                </blockquote>
+                                <div class="testimonial-author">
+                                    <div class="author-initials">AC</div>
+                                    <div class="author-meta">
+                                        <cite class="author-name">Dr. Alvaro Camacho</cite>
+                                        <span class="author-title">Director Asociado, Insumos Médicos LP</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="carousel-nav">
+                    <button class="carousel-indicator current-indicator" aria-label="Slide 1"></button>
+                    <button class="carousel-indicator" aria-label="Slide 2"></button>
+                    <button class="carousel-indicator" aria-label="Slide 3"></button>
+                </div>
+
+                <button class="carousel-button carousel-button-left" id="carousel-prev" aria-label="Testimonio anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="carousel-button carousel-button-right" id="carousel-next" aria-label="Siguiente testimonio">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Jurídico -->
+    <section class="blog section bg-alt" id="blog">
+        <div class="container">
+            <div class="section-header-flex">
+                <div>
+                    <div class="section-badge">Actualidad Legal</div>
+                    <h2 class="section-title">Blog Jurídico</h2>
+                    <p class="section-subtitle">Recursos y análisis sobre el marco legal y regulatorio en Bolivia.</p>
+                </div>
+            </div>
+
+            <!-- Feed de Entradas -->
+            <div class="blog-grid" id="blog-grid">
+                <!-- Se inyecta dinámicamente o usa artículos por defecto -->
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Contacto -->
+    <section class="contact section" id="contacto">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-badge">Ubicación y Consultas</div>
+                <h2 class="section-title">Contacto Legal</h2>
+                <p class="section-subtitle">Visítenos en nuestras oficinas o envíenos una consulta directa hoy mismo.</p>
+            </div>
+
+            <div class="grid grid-2">
+                <!-- Información de Contacto -->
+                <div class="contact-info-container scroll-reveal" data-origin="left">
+                    <div class="contact-card">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <div class="contact-text">
+                                <h3>Dirección Oficinas</h3>
+                                <p>Edificio Flor de Loto Empresarial, Calle 12 Nº 7918, Piso 6A</p>
+                                <p>Calacoto, Zona Sur - La Paz, Bolivia</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="contact-text">
+                                <h3>Teléfono / WhatsApp</h3>
+                                <p>+591 777 20008</p>
+                                <p>Lunes a Viernes: 08:30 - 18:30</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="contact-text">
+                                <h3>Correo Electrónico</h3>
+                                <p>alertoro@hotmail.com</p>
+                                <p>consultas@torogarcialegal.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mapa Interactivo Leaflet -->
+                    <div class="map-wrapper">
+                        <div id="map" class="styled-map"></div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Contacto -->
+                <div class="contact-form-container scroll-reveal" data-origin="right">
+                    <form id="contact-form" class="premium-form">
+                        <h3 class="form-title">Enviar Consulta Directa</h3>
+                        <p class="form-subtitle">Un abogado especialista responderá a su requerimiento en menos de 24 horas hábiles.</p>
+                        
+                        <div class="form-group">
+                            <label for="form-name">Nombre Completo <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" id="form-name" placeholder="Ej. Juan Pérez Camacho" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-phone">Teléfono de Contacto <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-phone"></i>
+                                <input type="tel" id="form-phone" placeholder="Ej. 77720000" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-email">Correo Electrónico <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="email" id="form-email" placeholder="Ej. juan.perez@correo.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-message">Detalles del Requerimiento / Mensaje <span class="required">*</span></label>
+                            <div class="input-wrapper textarea-wrapper">
+                                <i class="fa-solid fa-comment-dots"></i>
+                                <textarea id="form-message" rows="5" placeholder="Describa brevemente su situación jurídica..." required></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block" id="btn-submit-form">
+                            Enviar Consulta <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#inicio" class="footer-logo">
+                        <img src="images/logo-oscuro.png" alt="Toro & García Logo" style="height: 120px; width: auto; object-fit: contain;">
+                    </a>
+                    <p class="footer-tagline">Comprometidos con la defensa de sus derechos.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio"><i class="fa-solid fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="#nosotros"><i class="fa-solid fa-chevron-right"></i> Quiénes Somos</a></li>
+                        <li><a href="#socios"><i class="fa-solid fa-chevron-right"></i> Socios</a></li>
+                        <li><a href="#practicas"><i class="fa-solid fa-chevron-right"></i> Áreas de Práctica</a></li>
+                        <li><a href="#blog"><i class="fa-solid fa-chevron-right"></i> Blog Jurídico</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-legal">
+                    <h3>Documentación Legal</h3>
+                    <ul>
+                        <li><a href="#legal-modal" onclick="openLegalModal('aviso')"><i class="fa-solid fa-scale-balanced"></i> Aviso Legal</a></li>
+                        <li><a href="#legal-modal" onclick="openLegalModal('privacidad')"><i class="fa-solid fa-shield-halved"></i> Política de Privacidad</a></li>
+                        <li><a href="#legal-modal" onclick="openLegalModal('terminos')"><i class="fa-solid fa-file-contract"></i> Términos de Servicio</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom text-center">
+                <p>&copy; 2026 Toro & García Firma Legal. Todos los derechos reservados. Diseñado por <a href="https://valiasoluciones.com" target="_blank" rel="noopener" class="valia-link">VALIA Soluciones</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Widget del Asistente Jurídico Inteligente (IA) -->
+    <div class="ai-widget-container" id="ai-widget-container">
+        <button class="floating-ai-btn" id="ai-trigger-btn" aria-label="Asistente IA Legal">
+            <i class="fa-solid fa-scale-balanced"></i>
+            <span class="ai-badge">IA</span>
+        </button>
+        
+        <div class="ai-chat-window" id="ai-chat-window">
+            <div class="ai-header">
+                <div class="ai-header-info">
+                    <i class="fa-solid fa-scale-balanced ai-logo-icon"></i>
+                    <div>
+                        <h4>Asistente Legal IA</h4>
+                        <span>Toro & García (Firma Virtual)</span>
+                    </div>
+                </div>
+                <button class="ai-close-btn" id="ai-close-btn" aria-label="Cerrar chat"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="ai-messages" id="ai-messages">
+                <div class="ai-message bot-msg">
+                    <p>Saludos. Soy el Asistente Virtual IA de Toro & García. Estoy programado para guiarle sobre nuestras áreas de práctica y agilizar su consulta legal en Bolivia.</p>
+                </div>
+                <div class="ai-message bot-msg">
+                    <p>¿Qué tipo de asesoría legal requiere?</p>
+                </div>
+            </div>
+
+            <div class="ai-suggestions" id="ai-suggestions">
+                <button class="suggestion-tag" data-query="civil">Derecho Civil</button>
+                <button class="suggestion-tag" data-query="comercial">Derecho Comercial</button>
+                <button class="suggestion-tag" data-query="laboral">Derecho Laboral</button>
+                <button class="suggestion-tag whatsapp-suggestion" data-query="consulta">Agendar Consulta</button>
+            </div>
+
+            <form class="ai-input-area" id="ai-input-form">
+                <input type="text" id="ai-message-input" placeholder="Pregunte al asistente legal..." required autocomplete="off">
+                <button type="submit" class="ai-send-btn" aria-label="Enviar"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Socio (Alejandro Toro / César García) -->
+    <div class="modal" id="partner-modal">
+        <div class="modal-content glassmorphism">
+            <button class="modal-close" onclick="closePartnerModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body" id="partner-modal-body">
+                <!-- Se inyecta dinámicamente por JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Administración de Blog (Autoadministrable) -->
+    <div class="modal" id="blog-admin-modal">
+        <div class="modal-content glassmorphism">
+            <button class="modal-close" id="close-blog-admin-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body">
+                <h3 class="modal-title"><i class="fa-solid fa-user-gear"></i> Panel de Administración de Blog</h3>
+                <p class="modal-subtitle">Agregue nuevos artículos de análisis legal al feed público (Guardado localmente).</p>
+                
+                <form id="blog-admin-form" class="premium-form">
+                    <div class="form-group">
+                        <label for="post-title">Título del Artículo *</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-heading"></i>
+                            <input type="text" id="post-title" placeholder="Ej. Reformas impositivas para empresas bolivianas en 2026" required>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-2" style="gap:15px; margin-bottom: 0;">
+                        <div class="form-group">
+                            <label for="post-category">Categoría *</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-tags"></i>
+                                <select id="post-category" required>
+                                    <option value="Derecho Civil">Derecho Civil</option>
+                                    <option value="Derecho Comercial" selected>Derecho Comercial</option>
+                                    <option value="Derecho Laboral">Derecho Laboral</option>
+                                    <option value="Derecho Administrativo">Derecho Administrativo</option>
+                                    <option value="Derecho Constitucional">Derecho Constitucional</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="post-author">Autor *</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-user-tie"></i>
+                                <select id="post-author" required>
+                                    <option value="Dr. Alejandro Toro Canedo, PhD.">Dr. Alejandro Toro Canedo, PhD.</option>
+                                    <option value="Dr. César García">Dr. César García</option>
+                                    <option value="Firma Toro & García">Firma Toro & García</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="post-image">Imagen de Portada (Pre-cargadas para demo)</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-image"></i>
+                            <select id="post-image">
+                                <option value="images/justicia-comercial.png">Contrato y Justicia (Predeterminada)</option>
+                                <option value="images/hero-bg.png">Oficina Corporativa</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="post-content">Contenido del Artículo *</label>
+                        <div class="input-wrapper textarea-wrapper">
+                            <i class="fa-solid fa-paragraph"></i>
+                            <textarea id="post-content" rows="6" placeholder="Escriba el análisis jurídico aquí..." required></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-gold-solid btn-block">
+                        Publicar Artículo <i class="fa-solid fa-share-nodes"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Documentación Legal -->
+    <div class="modal" id="legal-modal">
+        <div class="modal-content glassmorphism">
+            <button class="modal-close" onclick="closeLegalModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body" id="legal-modal-body">
+                <!-- Se inyecta dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Leaflet JS y Código de la Aplicación -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="app.js"></script>
+</body>
+</html>
